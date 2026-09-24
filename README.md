@@ -6,6 +6,17 @@
 
 ---
 
+## 📸 截图 / Screenshots
+
+| 仪表盘 / Dashboard | 聊天测试 / Chat Test |
+| :---: | :---: |
+| ![仪表盘 — 一屏概览 Ollama 实例状态、模型数量、磁盘占用、运行会话](docs/screenshot-dashboard.jpg) | ![聊天测试 — 与本地大模型对话，支持 Markdown 渲染、代码块一键复制、操作按钮即时反馈](docs/screenshot-chat.jpg) |
+| 一屏概览 Ollama 实例状态、模型数量、磁盘占用与运行会话 | 支持 Markdown 渲染（标题/列表/代码块/链接），代码块一键复制，操作按钮即时反馈 |
+
+> 截图取自 v1.1.6 正式版运行界面。
+
+---
+
 ## 简体中文
 
 **Maxolla Ollama Manager** 是一款运行在 Windows 上的本地大模型管理桌面应用，用于管理本地部署的 Ollama 实例。它提供了清晰的模型管理界面、实时 GPU 监控、交互式聊天测试、日志查看以及完整的数据备份与还原功能。
