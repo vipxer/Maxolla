@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E0894F28-1774-436E-91C9-18E9978D0422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaManager.App", "src\OllamaManager.App\OllamaManager.App.csproj", "{945320B5-127E-4834-9191-68C17D0A2424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaManager.Core", "src\OllamaManager.Core\OllamaManager.Core.csproj", "{48EDF265-0400-4005-8256-BEC38FE7F2FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaManager.Infrastructure", "src\OllamaManager.Infrastructure\OllamaManager.Infrastructure.csproj", "{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaManager.Tests", "src\OllamaManager.Tests\OllamaManager.Tests.csproj", "{ECB8AAB2-181F-4321-B516-9A7D2BB402B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{945320B5-127E-4834-9191-68C17D0A2424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945320B5-127E-4834-9191-68C17D0A2424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945320B5-127E-4834-9191-68C17D0A2424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945320B5-127E-4834-9191-68C17D0A2424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EDF265-0400-4005-8256-BEC38FE7F2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EDF265-0400-4005-8256-BEC38FE7F2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EDF265-0400-4005-8256-BEC38FE7F2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EDF265-0400-4005-8256-BEC38FE7F2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB8AAB2-181F-4321-B516-9A7D2BB402B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB8AAB2-181F-4321-B516-9A7D2BB402B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB8AAB2-181F-4321-B516-9A7D2BB402B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB8AAB2-181F-4321-B516-9A7D2BB402B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{945320B5-127E-4834-9191-68C17D0A2424} = {E0894F28-1774-436E-91C9-18E9978D0422}
+		{48EDF265-0400-4005-8256-BEC38FE7F2FE} = {E0894F28-1774-436E-91C9-18E9978D0422}
+		{7DD01F1E-0B36-49CE-BBE8-3797DD04BF66} = {E0894F28-1774-436E-91C9-18E9978D0422}
+		{ECB8AAB2-181F-4321-B516-9A7D2BB402B4} = {E0894F28-1774-436E-91C9-18E9978D0422}
+	EndGlobalSection
+EndGlobal

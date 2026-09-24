@@ -1,0 +1,112 @@
+<UserControl x:Class="OllamaManager.App.Views.LogsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:OllamaManager.App.Localization"
+             xmlns:conv="clr-namespace:OllamaManager.App.Localization">
+    <UserControl.Resources>
+        <conv:LocConverter x:Key="Loc" />
+        <conv:BoolToVisibilityConverter x:Key="BoolVis" />
+    </UserControl.Resources>
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,16">
+            <TextBlock Style="{DynamicResource Text.H1}" Text="{loc:Loc Logs.Title}" />
+            <TextBlock Style="{DynamicResource Text.Caption}" Text="{loc:Loc Logs.Subtitle}" Margin="0,4,0,0" />
+        </StackPanel>
+
+        <Border Grid.Row="1" Style="{DynamicResource CardStyle}" Margin="0,0,0,16" Padding="16,14">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                         ToolTip="{loc:Loc Tip.LogsSearch}" Margin="0,0,8,0" />
+                <ComboBox Grid.Column="1" ItemsSource="{Binding AvailableLevels}" SelectedItem="{Binding FilterLevel}" Margin="0,0,8,0" />
+                <Button Grid.Column="2" Content="{loc:Loc Common.Refresh}" Command="{Binding RefreshCommand}"
+                        Style="{DynamicResource SecondaryButtonStyle}" Margin="0,0,8,0" />
+                <Button Grid.Column="3" Content="{loc:Loc Logs.ClearAll}" Command="{Binding ClearAllCommand}"
+                        Style="{DynamicResource SecondaryButtonStyle}" Margin="0,0,8,0" />
+                <Button Grid.Column="4" Content="{loc:Loc Logs.OpenFolder}" Command="{Binding OpenFolderCommand}"
+                        Style="{DynamicResource SecondaryButtonStyle}" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Style="{DynamicResource CardStyle}" Padding="0">
+            <Grid>
+                <DataGrid ItemsSource="{Binding Entries}" BorderThickness="0" Background="Transparent">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{loc:Loc Logs.Timestamp}"
+                                            Binding="{Binding Timestamp, StringFormat='{}{0:yyyy-MM-dd HH:mm:ss.fff}'}"
+                                            Width="170" />
+                        <DataGridTemplateColumn Header="{loc:Loc Logs.Level}" Width="100">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border CornerRadius="4" Padding="8,2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Level}" Value="Error">
+                                                        <Setter Property="Background" Value="{DynamicResource ErrorSoftBrush}" />
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Level}" Value="Warning">
+                                                        <Setter Property="Background" Value="{DynamicResource WarningSoftBrush}" />
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Level}" Value="Information">
+                                                        <Setter Property="Background" Value="{DynamicResource PrimarySoftBrush}" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+                                        <TextBlock Text="{Binding Level}" FontSize="11" FontWeight="SemiBold">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Level}" Value="Error">
+                                                            <Setter Property="Foreground" Value="{DynamicResource ErrorBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Level}" Value="Warning">
+                                                            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Level}" Value="Information">
+                                                            <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Border>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="{loc:Loc Logs.Category}" Binding="{Binding Category}" Width="120" />
+                        <DataGridTextColumn Header="{loc:Loc Logs.Message}" Binding="{Binding Message}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Border VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Style="{DynamicResource CardSubtleStyle}" Padding="20,14"
+                        Visibility="{Binding Entries.Count, Converter={StaticResource BoolVis}, ConverterParameter=Invert}">
+                    <StackPanel>
+                        <TextBlock Text="📋" FontFamily="Segoe UI Emoji, Segoe UI Symbol, Segoe UI"
+                                   FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,8" />
+                        <TextBlock Text="{loc:Loc Logs.Empty}" FontWeight="SemiBold" HorizontalAlignment="Center" />
+                        <TextBlock Text="{loc:Loc Logs.EmptyHint}" HorizontalAlignment="Center"
+                                   Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

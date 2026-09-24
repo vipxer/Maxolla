@@ -1,0 +1,79 @@
+Maxolla Ollama Manager — Attribution-NonCommercial-FreeSharing License
+Copyright (c) 2026 Maxolla
+
+本软件及衍生作品采用「署名-非商用-免费分享」许可证（Attribution-NonCommercial-FreeSharing License）。
+
+This software and its derivative works are licensed under the Attribution-NonCommercial-FreeSharing License.
+
+================================================================================
+中文条款（Chinese Terms）
+================================================================================
+
+在不违反以下条款的前提下，您可以自由地使用、修改、分发本软件：
+
+1. 署名（Attribution）
+   任何 fork、二次开发、再分发的版本必须在显著位置标注原作者与原始项目来源，
+   格式建议："Forked from Maxolla Ollama Manager (https://github.com/vipx/Maxolla)"。
+
+2. 免费分享（Free Sharing）
+   基于本项目的所有衍生作品必须以免费方式分发，不得设置任何付费墙、订阅、
+   内购或类似的收费屏障。源码或同等可访问性必须随分发版本一同提供。
+
+3. 非商用（Non-Commercial）
+   本软件及任何衍生作品均不得用于任何商业目的，包括但不限于：
+   - 售卖、二次售卖本软件或其衍生作品
+   - 将本软件捆绑进收费产品中
+   - 基于本软件提供收费服务（SaaS、付费咨询、付费支持等）
+   - 在企业内部用于商业化产品研发
+
+   学术研究、个人学习、非营利组织内部使用不受此限制。
+
+4. 同等条款（Share-Alike）
+   基于本项目的衍生作品如公开发布，必须采用与本协议兼容的许可证继续分发，
+   不得改用更宽松（允许商用）的许可证。
+
+5. 无担保（No Warranty）
+   本软件按"原样"提供，作者不对因使用本软件产生的任何损失承担责任。
+
+================================================================================
+English Terms
+================================================================================
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, EXCEPT for the conditions below:
+
+1. Attribution
+   Any fork, derivative work, or redistribution must give clear credit to the original
+   project and author. Suggested format:
+   "Forked from Maxolla Ollama Manager (https://github.com/vipx/Maxolla)".
+
+2. Free Sharing
+   All derivative works based on this project must be distributed free of charge,
+   without paywalls, subscriptions, in-app purchases, or any similar monetization
+   barriers. Source code (or equivalent accessibility) must accompany the distribution.
+
+3. Non-Commercial Use
+   This Software and any derivative works may NOT be used for commercial purposes,
+   including but not limited to:
+     - Selling or reselling the Software or its derivatives
+     - Bundling the Software into paid products
+     - Offering paid services based on the Software (SaaS, paid consulting, paid support, etc.)
+     - Using the Software inside a commercial organization for product development
+
+   Academic research, personal learning, and internal use by non-profit organizations
+   are NOT restricted by this clause.
+
+4. Share-Alike
+   Publicly distributed derivative works must be released under a license compatible
+   with this one. Derivative works may NOT be relicensed under more permissive terms
+   (e.g. a license that allows commercial use).
+
+5. No Warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+================================================================================
+联系作者 / Contact
+================================================================================
+商业合作授权（Commercial Licensing）请联系原作者获取书面许可。
+For commercial licensing, please contact the original author for written permission.

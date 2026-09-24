@@ -1,0 +1,282 @@
+<UserControl x:Class="OllamaManager.App.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:OllamaManager.App.Localization"
+             xmlns:conv="clr-namespace:OllamaManager.App.Localization">
+    <UserControl.Resources>
+        <conv:LocConverter x:Key="Loc" />
+        <conv:BoolToVisibilityConverter x:Key="BoolVis" />
+    </UserControl.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="24">
+        <StackPanel>
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Style="{DynamicResource Text.H1}" Text="{loc:Loc Settings.Title}" />
+                <TextBlock Style="{DynamicResource Text.Caption}" Text="{loc:Loc Settings.Subtitle}" Margin="0,4,0,0" />
+            </StackPanel>
+
+            <Border Style="{DynamicResource CardSubtleStyle}" Margin="0,0,0,16" Padding="16">
+                <StackPanel>
+                    <TextBlock Text="{loc:Loc SettingsGuide.Title}" FontWeight="SemiBold" FontSize="13" Margin="0,0,0,8" />
+                    <TextBlock Text="{loc:Loc SettingsGuide.Intro}" TextWrapping="Wrap" FontSize="12"
+                               Foreground="{DynamicResource TextSecondaryBrush}" />
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Margin="0,0,0,16" Padding="20">
+                <StackPanel>
+                    <TextBlock Style="{DynamicResource Text.H3}" Text="{loc:Loc Settings.General}" Margin="0,0,0,16" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.Language}" VerticalAlignment="Center" />
+                        <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding Languages}"
+                                  SelectedItem="{Binding SelectedLanguage}" DisplayMemberPath="NativeName" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.ApiHost}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Settings.ApiHost}"
+                                 ToolTip="{loc:Loc Tip.ApiHost}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.ApiPort}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Settings.ApiPort}"
+                                 ToolTip="{loc:Loc Tip.ApiPort}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.CustomExecutable}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Settings.CustomOllamaExecutable}"
+                                 ToolTip="{loc:Loc Tip.CustomExecutable}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.CustomModelsDir}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Settings.CustomModelsDirectory}"
+                                 ToolTip="{loc:Loc Tip.CustomModelsDir}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="5" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.RefreshOllama}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Settings.RefreshIntervalOllamaSeconds}"
+                                 ToolTip="{loc:Loc Tip.RefreshOllama}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="6" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.RefreshRunning}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Settings.RefreshIntervalRunningSeconds}"
+                                 ToolTip="{loc:Loc Tip.RefreshRunning}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="7" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.RefreshGpu}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Settings.RefreshIntervalGpuSeconds}"
+                                 ToolTip="{loc:Loc Tip.RefreshGpu}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="8" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.RefreshModels}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Settings.RefreshIntervalModelsSeconds}"
+                                 ToolTip="{loc:Loc Tip.RefreshModels}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="9" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.StartupArgs}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Settings.OllamaStartupArgs}"
+                                 ToolTip="{loc:Loc Tip.StartupArgs}" Margin="0,12,0,0" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Margin="0,0,0,16" Padding="20">
+                <StackPanel>
+                    <TextBlock Style="{DynamicResource Text.H3}" Text="{loc:Loc Settings.Behavior}" Margin="0,0,0,12" />
+                    <CheckBox Content="{loc:Loc Settings.MinimizeToTrayOnClose}" IsChecked="{Binding Settings.MinimizeToTrayOnClose}"
+                              ToolTip="{loc:Loc Tip.MinimizeToTray}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.StartMinimized}" IsChecked="{Binding Settings.StartMinimized}"
+                              ToolTip="{loc:Loc Tip.StartMinimized}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.StartWithWindows}" IsChecked="{Binding Settings.StartWithWindows}"
+                              ToolTip="{loc:Loc Tip.StartWithWindows}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.ConfirmDangerous}" IsChecked="{Binding Settings.ConfirmDangerousOperations}"
+                              ToolTip="{loc:Loc Tip.ConfirmDangerous}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.AllowDelete}" IsChecked="{Binding Settings.AllowDeleteModels}"
+                              ToolTip="{loc:Loc Tip.AllowDelete}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.AllowReleaseAll}" IsChecked="{Binding Settings.AllowReleaseAllModels}"
+                              ToolTip="{loc:Loc Tip.AllowReleaseAll}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.EnableTelemetry}" IsChecked="{Binding Settings.EnableTelemetry}"
+                              ToolTip="{loc:Loc Tip.EnableTelemetry}" Margin="0,0,0,6" />
+                    <CheckBox Content="{loc:Loc Settings.UseNvidiaGpu}" IsChecked="{Binding Settings.UseNvidiaGpuMonitoring}"
+                              ToolTip="{loc:Loc Tip.UseNvidiaGpu}" />
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Margin="0,0,0,16" Padding="20">
+                <StackPanel>
+                    <TextBlock Style="{DynamicResource Text.H3}" Text="{loc:Loc Settings.Logging}" Margin="0,0,0,16" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.LogLevel}" VerticalAlignment="Center" />
+                        <ComboBox Grid.Row="0" Grid.Column="1" Text="{Binding Settings.LogLevel}">
+                            <ComboBoxItem Content="Trace" />
+                            <ComboBoxItem Content="Debug" />
+                            <ComboBoxItem Content="Information" />
+                            <ComboBoxItem Content="Warning" />
+                            <ComboBoxItem Content="Error" />
+                        </ComboBox>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.MaxLogSize}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Settings.MaxLogFileSizeMB}"
+                                 ToolTip="{loc:Loc Tip.MaxLogSize}" Margin="0,12,0,0" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.MaxLogFiles}" VerticalAlignment="Center" Margin="0,12,0,0" />
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Settings.MaxLogFiles}"
+                                 ToolTip="{loc:Loc Tip.MaxLogFiles}" Margin="0,12,0,0" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Margin="0,0,0,16" Padding="20">
+                <StackPanel>
+                    <TextBlock Style="{DynamicResource Text.H3}" Text="{loc:Loc Settings.Paths}" Margin="0,0,0,12" />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.DataDirectory}" VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding DataDirectory}"
+                                   TextWrapping="Wrap" VerticalAlignment="Center" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.LogsDirectory}" VerticalAlignment="Center" Margin="0,8,0,0" />
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding LogsDirectory}"
+                                   TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,8,0,0" />
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.ConfigFile}" VerticalAlignment="Center" Margin="0,8,0,0" />
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ConfigFilePath}"
+                                   TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,8,0,0" />
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc Settings.BackupsDirectory}" VerticalAlignment="Center" Margin="0,8,0,0" />
+                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding BackupsDirectory}"
+                                   TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,8,0,0" />
+                    </Grid>
+
+                    <Button Content="{loc:Loc Settings.OpenDataFolder}" Command="{Binding OpenDataDirCommand}"
+                            Style="{DynamicResource SecondaryButtonStyle}" Margin="0,12,0,0" HorizontalAlignment="Left" />
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Padding="20">
+                <StackPanel>
+                    <TextBlock Style="{DynamicResource Text.H3}" Text="{loc:Loc About.Title}" Margin="0,0,0,16" />
+
+                    <Border CornerRadius="12" Padding="18" Margin="0,0,0,16">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#3B82F6" Offset="0" />
+                                <GradientStop Color="#6366F1" Offset="1" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="14" ShadowDepth="2" Opacity="0.35" Color="#3B82F6" />
+                        </Border.Effect>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border Width="52" Height="52" CornerRadius="14" Background="#22FFFFFF" VerticalAlignment="Center">
+                                <TextBlock Text="M" FontSize="26" FontWeight="Bold" Foreground="White"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="16,0,0,0" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding AppVersion}" FontWeight="SemiBold" FontSize="18" Foreground="White" />
+                                <TextBlock Text="{loc:Loc About.CurrentVersion}"
+                                           Foreground="#CCFFFFFF" FontSize="11" Margin="0,3,0,0" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc About.Developer}" VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="vipxer" FontWeight="SemiBold" VerticalAlignment="Center" />
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Style="{DynamicResource Text.Label}"
+                                   Text="{loc:Loc About.GitHub}" VerticalAlignment="Center" Margin="0,8,0,0" />
+                        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,8,0,0">
+                            <Hyperlink NavigateUri="https://github.com/vipxer" RequestNavigate="OnGitHubLinkRequestNavigate">
+                                <Run Text="https://github.com/vipxer" />
+                            </Hyperlink>
+                        </TextBlock>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{DynamicResource CardStyle}" Margin="0,16,0,0" Padding="16,14">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="{loc:Loc Common.SaveAndApply}" Command="{Binding SaveCommand}" Margin="0,0,8,0" />
+                    <Button Grid.Column="1" Content="{loc:Loc Settings.ResetDefaults}" Command="{Binding ResetCommand}"
+                            Style="{DynamicResource SecondaryButtonStyle}" />
+                    <Border Grid.Column="3" Style="{DynamicResource CardSubtleStyle}"
+                            Visibility="{Binding SaveFeedback, Converter={StaticResource BoolVis}}"
+                            Padding="10,6">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="✓" FontWeight="Bold" Foreground="{DynamicResource SuccessBrush}"
+                                       VerticalAlignment="Center" />
+                            <TextBlock Text="{Binding SaveFeedback}" Foreground="{DynamicResource SuccessBrush}"
+                                       VerticalAlignment="Center" Margin="6,0,0,0" FontWeight="SemiBold" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

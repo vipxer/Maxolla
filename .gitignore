@@ -1,0 +1,62 @@
+## .NET / Visual Studio
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+*.pidb
+*.userosscache
+*.sln.ide/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.pfx
+*.publishsettings
+
+## NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.coverage
+*.coveragexml
+
+## Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+.vsconfig
+*.swp
+
+## Publish output (release artifacts go under /publish/)
+publish/v*/MaxollaOllamaManager.exe
+publish/v*/MaxollaOllamaManager.pdb
+publish/v*/OllamaManager.*.pdb
+publish/v*/Locales/
+
+## OS / IDE noise
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+## Tooling cache / session state
+.claude/
