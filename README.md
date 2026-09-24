@@ -74,6 +74,11 @@ dotnet publish src/OllamaManager.App/OllamaManager.App.csproj \
 
 ```
 Maxolla/
+├── .gitignore                      # Git 忽略规则
+├── docs/                           # 文档与展示素材
+│   ├── screenshot-dashboard.jpg    # 仪表盘截图
+│   ├── screenshot-chat.jpg         # 聊天测试截图
+│   └── social-preview.png          # GitHub 社交预览图（1280×640）
 ├── src/
 │   ├── OllamaManager.App/          # WPF 主应用（视图、视图模型、主题、托盘）
 │   ├── OllamaManager.Core/         # 核心接口与模型定义
