@@ -32,7 +32,7 @@
 
 #### 下载运行（推荐）
 
-前往 [Releases](https://github.com/vipx/Maxolla/releases) 页面，下载最新版压缩包，解压后双击 `MaxollaOllamaManager.exe` 即可运行。无需安装，无需配置环境。
+前往 [Releases](https://github.com/vipxer/Maxolla/releases) 页面，下载最新版压缩包，解压后双击 `MaxollaOllamaManager.exe` 即可运行。无需安装，无需配置环境。
 
 > **系统要求：** Windows 10/11，64 位。需要预先安装并运行 Ollama（[ollama.com](https://ollama.com)）。
 
@@ -40,7 +40,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # 还原依赖并构建
 dotnet restore
@@ -73,7 +73,7 @@ Maxolla/
 └── README.md                       # 本文件
 ```
 
-> **说明：** 预编译的二进制文件（v1.1.6 单文件 EXE）不存放在源码仓库中，请前往 [Releases](https://github.com/vipx/Maxolla/releases) 页面下载。
+> **说明：** 预编译的二进制文件（v1.1.6 单文件 EXE）不存放在源码仓库中，请前往 [Releases](https://github.com/vipxer/Maxolla/releases) 页面下载。
 
 ---
 
@@ -103,7 +103,7 @@ Maxolla/
 
 #### 下載執行（推薦）
 
-前往 [Releases](https://github.com/vipx/Maxolla/releases) 頁面，下載最新版壓縮包，解壓後雙擊 `MaxollaOllamaManager.exe` 即可執行。无需安裝，無需配置環境。
+前往 [Releases](https://github.com/vipxer/Maxolla/releases) 頁面，下載最新版壓縮包，解壓後雙擊 `MaxollaOllamaManager.exe` 即可執行。无需安裝，無需配置環境。
 
 > **系統需求：** Windows 10/11，64 位元。需要預先安裝並執行 Ollama（[ollama.com](https://ollama.com)）。
 
@@ -111,7 +111,7 @@ Maxolla/
 
 ```bash
 # 克隆倉庫
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # 還原依賴並建置
 dotnet restore
@@ -160,7 +160,7 @@ dotnet publish src/OllamaManager.App/OllamaManager.App.csproj \
 
 #### Download & Run (Recommended)
 
-Go to the [Releases](https://github.com/vipx/Maxolla/releases) page, download the latest release, extract the archive, and double-click `MaxollaOllamaManager.exe`. No installation or environment setup required.
+Go to the [Releases](https://github.com/vipxer/Maxolla/releases) page, download the latest release, extract the archive, and double-click `MaxollaOllamaManager.exe`. No installation or environment setup required.
 
 > **Requirements:** Windows 10/11, 64-bit. Ollama must be installed and running ([ollama.com](https://ollama.com)).
 
@@ -168,7 +168,7 @@ Go to the [Releases](https://github.com/vipx/Maxolla/releases) page, download th
 
 ```bash
 # Clone the repository
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # Restore dependencies and build
 dotnet restore
@@ -217,7 +217,7 @@ Forks and free sharing are welcome. Derivative works based on this project must 
 
 #### ダウンロードと実行（推奨）
 
-[Releases](https://github.com/vipx/Maxolla/releases) ページから最新版をダウンロードし、アーカイブを展開して `MaxollaOllamaManager.exe` をダブルクリックしてください。インストールや環境設定は不要です。
+[Releases](https://github.com/vipxer/Maxolla/releases) ページから最新版をダウンロードし、アーカイブを展開して `MaxollaOllamaManager.exe` をダブルクリックしてください。インストールや環境設定は不要です。
 
 > **動作環境：** Windows 10/11、64 ビット版。Ollama がインストールされ実行中であること（[ollama.com](https://ollama.com)）。
 
@@ -225,7 +225,7 @@ Forks and free sharing are welcome. Derivative works based on this project must 
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # 依存関係を復元してビルド
 dotnet restore
@@ -274,7 +274,7 @@ Fork と無料共有を歓迎します。本プロジェクトに基づく派生
 
 #### 다운로드 및 실행 (권장)
 
-[Releases](https://github.com/vipx/Maxolla/releases) 페이지에서 최신 버전을 다운로드하고 압축을 푼 후 `MaxollaOllamaManager.exe`를 더블클릭하세요. 설치나 환경 설정이 필요하지 않습니다.
+[Releases](https://github.com/vipxer/Maxolla/releases) 페이지에서 최신 버전을 다운로드하고 압축을 푼 후 `MaxollaOllamaManager.exe`를 더블클릭하세요. 설치나 환경 설정이 필요하지 않습니다.
 
 > **요구사항:** Windows 10/11, 64비트. Ollama가 설치되어 실행 중이어야 합니다 ([ollama.com](https://ollama.com)).
 
@@ -282,7 +282,7 @@ Fork と無料共有を歓迎します。本プロジェクトに基づく派生
 
 ```bash
 # 리포지토리 클론
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # 의존성 복원 및 빌드
 dotnet restore
@@ -331,7 +331,7 @@ Fork 및 무료 공유를 환영합니다. 본 프로젝트 기반의 파생작�
 
 #### Скачать и запустить (рекомендуется)
 
-Перейдите на страницу [Releases](https://github.com/vipx/Maxolla/releases), скачайте последнюю версию, распакуйте архив и дважды кликните на `MaxollaOllamaManager.exe`. Установка и настройка окружения не требуются.
+Перейдите на страницу [Releases](https://github.com/vipxer/Maxolla/releases), скачайте последнюю версию, распакуйте архив и дважды кликните на `MaxollaOllamaManager.exe`. Установка и настройка окружения не требуются.
 
 > **Требования:** Windows 10/11, 64-бит. Ollama должен быть установлен и запущен ([ollama.com](https://ollama.com)).
 
@@ -339,7 +339,7 @@ Fork 및 무료 공유를 환영합니다. 본 프로젝트 기반의 파생작�
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # Восстановить зависимости и собрать
 dotnet restore
@@ -388,7 +388,7 @@ dotnet publish src/OllamaManager.App/OllamaManager.App.csproj \
 
 #### Descargar y ejecutar (recomendado)
 
-Vaya a la página de [Releases](https://github.com/vipx/Maxolla/releases), descargue la última versión, extraiga el archivo y haga doble clic en `MaxollaOllamaManager.exe`. No requiere instalación ni configuración de entorno.
+Vaya a la página de [Releases](https://github.com/vipxer/Maxolla/releases), descargue la última versión, extraiga el archivo y haga doble clic en `MaxollaOllamaManager.exe`. No requiere instalación ni configuración de entorno.
 
 > **Requisitos:** Windows 10/11, 64 bits. Ollama debe estar instalado y en ejecución ([ollama.com](https://ollama.com)).
 
@@ -396,7 +396,7 @@ Vaya a la página de [Releases](https://github.com/vipx/Maxolla/releases), desca
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # Restaurar dependencias y compilar
 dotnet restore
@@ -445,7 +445,7 @@ Se aceptan forks y redistribución gratuita. Los trabajos derivados basados en e
 
 #### التنزيل والتشغيل (موصى به)
 
-انتقل إلى صفحة [Releases](https://github.com/vipx/Maxolla/releases)، وقم بتنزيل أحدث إصدار، واستخرج الأرشيف، وانقر نقرًا مزدوجًا على `MaxollaOllamaManager.exe`. لا حاجة للتثبيت أو إعداد البيئة.
+انتقل إلى صفحة [Releases](https://github.com/vipxer/Maxolla/releases)، وقم بتنزيل أحدث إصدار، واستخرج الأرشيف، وانقر نقرًا مزدوجًا على `MaxollaOllamaManager.exe`. لا حاجة للتثبيت أو إعداد البيئة.
 
 > **المتطلبات:** Windows 10/11، 64 بت. يجب تثبيت Ollama وتشغيله ([ollama.com](https://ollama.com)).
 
@@ -453,7 +453,7 @@ Se aceptan forks y redistribución gratuita. Los trabajos derivados basados en e
 
 ```bash
 # استنساخ المستودع
-git clone https://github.com/vipx/Maxolla.git
+git clone https://github.com/vipxer/Maxolla.git
 
 # استعادة التبعيات والبناء
 dotnet restore
