@@ -512,7 +512,7 @@ dotnet publish src/OllamaManager.App/OllamaManager.App.csproj \
 
 本项目欢迎大家 Fork 进行二次开发，并免费分享给更多人使用。根据项目许可证条款，请遵守以下约定：
 
-- **标注来源**：基于本项目的衍生作品，请在显著位置标注原作者与原始项目来源，例如 "Forked from Maxolla Ollama Manager (https://github.com/vipxer/Maxolla)"。
+- **标注来源**：基于本项目的衍生作品，请在显著位置标注原作者与原始项目来源。推荐写法：在 README 或关于页面写一句 `Forked from Maxolla Ollama Manager`，再附上链接 `https://github.com/vipxer/Maxolla`。
 - **免费分享**：衍生作品必须以免费方式分发，不得设置付费墙、订阅或类似的收费屏障，源码须随分发版本一同提供。
 - **非商用**：本软件及任何衍生作品不得用于商业目的（包括售卖、捆绑进收费产品、提供付费服务等）。
 - **同等条款**：公开发布的衍生作品须采用与本协议兼容的许可证，不得改用更宽松（允许商用）的许可证。
