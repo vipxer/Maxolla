@@ -508,6 +508,18 @@ dotnet publish src/OllamaManager.App/OllamaManager.App.csproj \
 
 ---
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=vipxer%2Fmaxolla&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=vipxer/maxolla&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=vipxer/maxolla&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=vipxer/maxolla&type=date&legend=top-left" />
+ </picture>
+</a>
+
+---
+
 **觉得好用的话，欢迎给个 Star！**
 
 本项目欢迎大家 Fork 进行二次开发，并免费分享给更多人使用。根据项目许可证条款，请遵守以下约定：
