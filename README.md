@@ -1,4 +1,4 @@
-# Maxolla Ollama Manager
+# Maxolla Ollama Manager - Desktop GUI for managing local Ollama models
 
 > 简洁高效的本地 Ollama 大模型管理工具，支持模型管理、聊天测试、GPU 监控、日志查看、数据备份与还原，深度适配 Windows 系统，开箱即用。
 
